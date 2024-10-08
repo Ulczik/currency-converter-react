@@ -8,7 +8,7 @@ https://ulczik.github.io/currency-converter-react/
 
 ## How to use
 
-![howToUse](public/AnimationGif.gif)
+![howToUse](public/Animation.gif)
 
 ## Description
 
