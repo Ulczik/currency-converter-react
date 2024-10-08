@@ -4,7 +4,7 @@ This repository present simple currency converter, that was created as a project
 
 # Demo
 
-https://ulczik.github.io/Money-converter/
+https://ulczik.github.io/currency-converter-react/
 
 ## How to use
 
