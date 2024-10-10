@@ -4,7 +4,7 @@ import { Result } from "./Result";
 import "./style.css";
 
 export const Form = ({ calculateResult, result }) => {
-  const [currency, setCurrency] = useState(currencies[0].type);
+  const [currency, setCurrency] = useState(currencies[0].name);
   const [amount, setAmount] = useState("");
 
   const onSumit = (event) => {
@@ -56,7 +56,7 @@ export const Form = ({ calculateResult, result }) => {
         <a
           rel="noreferrer noopener"
           target="_blank"
-          class="footer__link"
+          className="footer__link"
           href="https://nbp.pl/statystyka-i-sprawozdawczosc/kursy/tabela-a/"
         >
           Narodowego banku Polskiego
