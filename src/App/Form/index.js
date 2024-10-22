@@ -25,6 +25,7 @@ export const Form = ({ calculateResult, result }) => {
             className="form__field"
             type="number"
             step="0.01"
+            min="0.01"
             required
             autoFocus
           />
