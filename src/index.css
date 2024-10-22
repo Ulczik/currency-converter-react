@@ -18,3 +18,7 @@ html {
   background-size: cover;
   background-position: center;
 }
+
+body {
+  margin: 0px;
+}
