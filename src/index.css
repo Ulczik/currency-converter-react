@@ -12,8 +12,8 @@ html {
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-image: url("backgroung.jpg");
   background-size: cover;
   background-position: center;

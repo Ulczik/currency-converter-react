@@ -17,7 +17,7 @@ export const Form = ({ calculateResult, result }) => {
       <h1 className="form__header">Kalkulator walut</h1>
       <p>
         <label>
-          <span className="fotm__label">Kwota w zł*</span>
+          <span className="form__label">Kwota w zł*</span>
           <input
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
@@ -32,7 +32,7 @@ export const Form = ({ calculateResult, result }) => {
       </p>
       <p>
         <label>
-          <span className="fotm__label">Wybierz walutę</span>
+          <span className="form__label">Wybierz walutę</span>
           <select
             className="form__field"
             value={currency}
