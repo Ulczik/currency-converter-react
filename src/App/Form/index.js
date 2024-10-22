@@ -3,15 +3,24 @@ import { currencies } from "../currencies";
 import { Result } from "./Result";
 import "./style.css";
 
-export const Form = ({ calculateResult, result }) => {
+export const Form = () => {
   const [currency, setCurrency] = useState(currencies[0].name);
   const [amount, setAmount] = useState("");
+  const [result, setResult] = useState();
 
   const onSumit = (event) => {
     event.preventDefault();
-    calculateResult(currency, amount);
-  };
 
+    const calculateResult = (currency, amount) => {
+      const rate = currencies.find(({ name }) => name === currency).rate;
+
+      setResult({
+        sourceAmount: +amount,
+        targetAmount: amount / rate,
+        currency,
+      });
+    };
+  };
   return (
     <form className="form" onSubmit={onSumit}>
       <h1 className="form__header">Kalkulator walut</h1>
