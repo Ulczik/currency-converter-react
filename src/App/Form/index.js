@@ -8,21 +8,22 @@ export const Form = () => {
   const [amount, setAmount] = useState("");
   const [result, setResult] = useState();
 
-  const onSumit = (event) => {
+  const calculateResult = (currency, amount) => {
+    const rate = currencies.find(({ name }) => name === currency).rate;
+
+    setResult({
+      sourceAmount: +amount,
+      targetAmount: amount / rate,
+      currency,
+    });
+  };
+
+  const onSbumit = (event) => {
     event.preventDefault();
-
-    const calculateResult = (currency, amount) => {
-      const rate = currencies.find(({ name }) => name === currency).rate;
-
-      setResult({
-        sourceAmount: +amount,
-        targetAmount: amount / rate,
-        currency,
-      });
-    };
+    calculateResult(currency, amount);
   };
   return (
-    <form className="form" onSubmit={onSumit}>
+    <form className="form" onSubmit={onSbumit}>
       <h1 className="form__header">Kalkulator walut</h1>
       <p>
         <label>
